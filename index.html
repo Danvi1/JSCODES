@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay{
+            width:  100%;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            display:none;
+
+        }
+
+        .Box{
+            Width:50%;
+            height:60vh;
+            background-color: white;
+            margin-left: 300px;
+            margin-top: 100px;
+
+
+        }
+        .bt {
+            background-color: rgba(51, 51, 51, 0.05);
+            border-radius: 10px;
+            border-width: 0;
+            color: #333333;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 10px 12px;
+            text-align: center;
+            transition: all 200ms;
+            vertical-align: baseline;
+            white-space: nowrap;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-top:100px;
+            margin-left: 600px;
+            border: 3px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="overlay" id="popup">
+        <div class="Box">
+            <button id="cancel">Cancel</button> <br> <br> <br>
+
+            Email:<input type="email"><br><br>
+            Password: <input type="password">
+        </div>
+    </div>
+    <Button class="bt" id="Login"> Login</Button>
+    
+    <script>
+       // document.getElementById("Login").onclick = function () { writecode here}
+
+       document.getElementById('Login').addEventListener('click',popUp);
+
+       function popUp(){
+        document.getElementById('popup').style.display='block';
+    
+       }
+
+       document.getElementById('cancel').addEventListener('click',hidePopUp);
+
+       function hidePopUp(){
+        document.getElementById('popup').style.display='none';
+    
+       }
+    </script>
+
+</body>
+
+</html>
